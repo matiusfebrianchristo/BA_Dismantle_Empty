@@ -12,7 +12,7 @@ def watermark():
     print("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
     print(f"       Success created {file_created} file  ")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
-    print("=-=     BUILD WITH \u2764\uFE0F BY MATIUS       =-=")
+    print("=-=     BUILD WITH \u2764\uFE0F  BY MATIUS       =-=")
     print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
 
 #for ignore exception warnings
@@ -50,7 +50,7 @@ def createDocument(data):
         
     except Exception as message :
         print(message)
-
+        return 'failed'
 
 
 #For loop data in input excel
@@ -65,7 +65,8 @@ for data in sheet.to_numpy():
     'categoty': data[6],
     'pairing_site': data[7],
     'longtitude' : data[8],
-    'latitude': data[9]
+    'latitude': data[9],
+    'date': data[10]
     }
     
     #For Create the documents
